@@ -1,0 +1,27 @@
+package week5;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+
+public class Practice4 {
+
+	public static void main(String[] args) {
+		
+		ExecutorService service = Executors.newFixedThreadPool(3);
+		Runnable r1 = new Task("Task 1");
+		Runnable r2 = new Task("Task 2");
+		Runnable r3 = new Task("Task 3");
+		Runnable r4 = new Task("Task 4");
+		Runnable r5 = new Task("Task 5");
+		
+		service.execute(r1);
+		service.execute(r2);
+		service.execute(r3);
+		service.execute(r4);
+		service.execute(r5);
+		
+		service.shutdown();
+	}
+
+}

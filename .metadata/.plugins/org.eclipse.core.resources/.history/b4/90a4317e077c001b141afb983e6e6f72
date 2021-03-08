@@ -1,0 +1,13 @@
+package assignment3;
+
+public class Chef extends Thread {
+
+	private String order;
+	private int tableNo;
+	private boolean isReady;
+	
+	public void orderReceived(Order order) {
+
+	}
+
+}

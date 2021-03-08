@@ -1,0 +1,9 @@
+package assignment3;
+
+public class Order {
+	
+	private String meal;
+	private int tableNo;
+	private int orderNo;
+	
+}

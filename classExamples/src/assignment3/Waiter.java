@@ -1,0 +1,37 @@
+package assignment3;
+
+public class Waiter {
+	
+	private String order;
+	private int tableNo;
+	private boolean isReady;
+	private Chef chef;
+	
+	
+	public Waiter(Chef chef) {
+		this.chef = chef;
+	}
+
+
+	public void sendOrder(Order order) {
+		this.order = order.getOrder();
+		this.tableNo = order.getTableNo();
+		this.isReady = order.isReady();
+		this.chef.start();
+		
+	}
+	
+	public void orderReady() {
+		if(this.isReady == false){
+			System.out.println("Order is still being made!");
+			try {
+				wait();
+			}catch(Exception e) {
+				
+			}
+			
+		}
+		
+	}
+
+}

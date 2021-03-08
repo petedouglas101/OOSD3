@@ -1,0 +1,35 @@
+package assignment3;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Restaurant {
+	
+	static Chef ourChef = new Chef();
+	ArrayList<Order> orderList;
+
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		orderList = new ArrayList<Order>();
+		Order order = null;
+		
+		System.out.println("What would you like?: ");
+		String food = scan.nextLine();
+		
+		System.out.println("What is your table number?: ");
+		int tableNo = scan.nextInt();
+		scan.nextLine();
+		
+		order = new Order(food, tableNo, false);
+		orderList.add(order);
+		
+		sendOrder(order);
+		
+	}
+	
+	public static void sendOrder(Order order) {
+		ourChef.orderReceived(order);
+	}
+
+}
