@@ -1,7 +1,6 @@
 package week7;
 
-//Thread safe --->//HELLO MY NAME IS PETER
-//I would like to do a test on GitHub
+//Thread safe --->
 public class ThreadResources {
 	
 	public void resourceMethod() {
