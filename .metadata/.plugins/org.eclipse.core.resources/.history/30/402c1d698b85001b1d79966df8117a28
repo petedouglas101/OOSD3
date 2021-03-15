@@ -1,0 +1,48 @@
+package week8;
+
+import java.util.Map;
+
+public class Bank {
+	
+	private static int uniqueIdentifier = 10001;
+	
+	private Map<String, Customer> customerCollection;
+	
+	public String createCustomer(String firstName, String lastName, String addresss, String phoneNo) {
+		Bank.uniqueIdentifier++;
+		String customerID = Bank.uniqueIdentifier;
+		return null;
+		
+	}
+	
+	public void createAccount(String customerID, int accountType) {
+		
+	}
+	
+	public Customer findCustomer(String customerID) {
+		
+		return null;
+		
+	}
+	
+	public boolean deposit(Customer customer, double amount) {
+		
+		return false;
+		
+	}
+	
+	public boolean withdraw(Customer customer, double amount) {
+		
+		return false;
+	}
+	
+	
+
+	public static void main(String[] args) {
+		
+		
+		
+
+	}
+
+}

@@ -1,0 +1,65 @@
+package week8;
+
+import java.util.Hashtable;
+import java.util.Map;
+
+public class Bank {
+	
+	private static int uniqueIdentifier = 10001;
+	private static String ibanStart = "IEAIB";
+	private static int accountNo = 1000001;
+	private static int sortCode = 900102;
+	
+	private Map<Integer, Customer> customerCollection;
+	private int depositType = 101;
+	private int currentType = 102;
+	
+	
+	public Bank() {
+		this.customerCollection = new Hashtable<Integer, Customer>();
+	}
+	
+	public Customer createCustomer(String firstName, String lastName, String address, String phoneNo) {
+		Bank.uniqueIdentifier++;
+		int customerID = Bank.uniqueIdentifier;
+		Customer myCustomer = new Customer(firstName, lastName, address, phoneNo, customerID);
+		customerCollection.put(customerID, myCustomer);
+		
+		return myCustomer;
+		
+	}
+	
+	public void createAccount(String customerID, int accountType) {
+		Customer customer = customerCollection.get(customerID);
+		Account account = new Account(currentType, )
+		
+		
+	}
+	
+	public Customer findCustomer(String customerID) {
+		
+		return null;
+		
+	}
+	
+	public boolean deposit(Customer customer, double amount) {
+		
+		return false;
+		
+	}
+	
+	public boolean withdraw(Customer customer, double amount) {
+		
+		return false;
+	}
+	
+	
+
+	public static void main(String[] args) {
+		
+		
+		
+
+	}
+
+}
