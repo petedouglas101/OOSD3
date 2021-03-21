@@ -1,0 +1,31 @@
+package week6Revision;
+
+public class assignment1 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+
+class Counter{
+	
+}
+
+class Publisher{
+	
+}
+
+class Repository{
+	private int value;
+
+	public int getValue() {
+		return value;
+	}
+
+	public void setValue(int value) {
+		this.value = value;
+	}
+	
+}

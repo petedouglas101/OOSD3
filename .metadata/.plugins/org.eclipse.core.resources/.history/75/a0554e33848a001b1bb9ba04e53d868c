@@ -1,0 +1,17 @@
+package week6Revision;
+
+public class StaticTest {
+	public static int count;
+	public String address;
+
+	public static void getCount() {
+		System.out.println("Count: " + count);
+		
+	}
+	
+	public void printAddress() {
+		System.out.println("Address: " + address);
+		
+	}
+
+}

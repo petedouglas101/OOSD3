@@ -1,0 +1,16 @@
+package week6Revision;
+
+public class TestStatic {
+
+	public static void main(String[] args) {
+		StaticTest test = new StaticTest();
+		test.setInstanceCount();
+		test.printInstanceCount();
+		
+		StaticTest test2 = new StaticTest();
+		test.setInstanceCount();
+		test.printInstanceCount();
+
+	}
+
+}

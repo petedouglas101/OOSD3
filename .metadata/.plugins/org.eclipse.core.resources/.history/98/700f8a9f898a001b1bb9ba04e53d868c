@@ -1,0 +1,71 @@
+package week6Revision;
+
+public class assignment1 {
+
+	public static void main(String[] args) {
+		Repository repos = new Repository();
+		Counter counter = new Counter(repos);
+		Publisher publish = new Publisher(repos);
+		
+		Thread countThread = new Thread(counter);
+		countThread.start();
+		publish.start();
+
+	}
+
+}
+
+class Counter implements Runnable{
+	Repository repos;
+	
+	public Counter(Repository repos) {
+		this.repos = repos;
+	}
+
+	@Override
+	public void run() {
+		synchronized(repos) {
+			for(int i = 0; i < 100; i++) {
+				System.out.println("Counter thread setting value: " + i);
+				repos.setValue(i);
+			}
+		}
+		
+	}
+	
+}
+
+class Publisher extends Thread{
+	Repository repos;
+	
+	public Publisher(Repository repos) {
+		this.repos = repos;
+	}
+	
+	public void run() {
+		for(int i = 0; i < 100; i++) {
+			System.out.println("Publisher thread reading value: " + repos.getValue());
+			
+		}
+		
+	}
+	
+}
+
+class Repository{
+	private boolean printed = true;
+	private int value;
+	
+	public int getValue() {
+		return value;
+	}
+
+	public void setValue(int value) {
+		this.value = value;
+	}
+	
+	public boolean isPrinted() {
+		return printed;
+	}
+	
+}

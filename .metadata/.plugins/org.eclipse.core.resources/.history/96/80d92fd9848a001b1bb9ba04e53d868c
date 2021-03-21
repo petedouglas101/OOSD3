@@ -1,0 +1,11 @@
+package week6Revision;
+
+public class TestStatic {
+
+	public static void main(String[] args) {
+		StaticTest test = new StaticTest();
+		
+
+	}
+
+}

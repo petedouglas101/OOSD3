@@ -16,8 +16,7 @@ public class SynchronisationTest {
 
 class Table {
 
-	void printTable(int n) { // IS NOW A SYNCHRONISED METHOD! (IF THE METHOD IS SYNC
-		synchronized (this) { //NOW SYNCHRONISED WITH A SYNCHRONISED BLOCK!
+	synchronized void printTable(int n) {
 			for (int i = 1; i <= 5; i++) {
 				System.out.println(n * i);
 				try {
@@ -28,8 +27,6 @@ class Table {
 
 			}
 		}
-
-	}
 }
 
 class MyThreadOne extends Thread {

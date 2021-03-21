@@ -1,0 +1,11 @@
+package week6Revision;
+
+public class StaticTest {
+	public static String name;
+	public String address;
+
+	public static void> printName() {
+		System.out.println("")
+	}
+
+}
