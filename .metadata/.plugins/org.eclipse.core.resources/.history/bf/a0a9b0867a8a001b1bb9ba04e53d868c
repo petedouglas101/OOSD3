@@ -1,0 +1,15 @@
+package week6Revision;
+
+public class ThreadClass extends Thread {
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+	
+	public void run() {
+		System.out.println("My thread is running!");
+	}
+
+}
