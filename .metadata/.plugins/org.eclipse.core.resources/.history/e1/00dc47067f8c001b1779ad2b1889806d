@@ -39,8 +39,6 @@ public class Waiter extends Thread {
 					e.printStackTrace();
 				}
 				
-				System.out.println("Order is made!");
-				
 			}
 		}
 		
