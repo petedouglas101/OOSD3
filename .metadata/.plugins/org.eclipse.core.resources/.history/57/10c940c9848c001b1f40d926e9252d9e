@@ -1,0 +1,35 @@
+package eTest1;
+
+import java.util.ArrayList;
+
+public class Library {
+	
+	private Book[] bookList;
+	
+	public int findBookIndex(String isbn) {
+		int index = 0;
+		for(int i = 0; i < bookList.length; i++) {
+			if(bookList[i].getIsbn().equals(isbn)) {
+				System.out.println("Book has been found!");
+				index = i;
+			}else {
+				System.out.println("Book has not been found!");
+				index = -1;
+			}
+		}
+		
+		return index;
+
+		
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}
+
+class Member {
+
+}
+

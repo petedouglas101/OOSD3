@@ -1,0 +1,57 @@
+package eTest1;
+
+import java.util.ArrayList;
+
+public class Library {
+	
+	private ArrayList<Book> bookList = new ArrayList<Book>() ;
+	
+	int index = findBookIndex("peter");
+	
+	public int findBookIndex(String isbn) {
+		int index = 0;
+		for(int i = 0; i < bookList.size(); i++) {
+			if(bookList.get(i).getIsbn().equals(isbn)) {
+				System.out.println("Book has been found!");
+				index = i;
+			}else {
+				System.out.println("Book has not been found!");
+				index = -1;
+			}
+		}
+		
+		return index;
+
+		
+	}
+	
+	public Book loanBook(int index) {
+		Book aBook = null;
+		
+		for(int i = 0; i < bookList.size(); i++) {
+			if(i == index) {
+				aBook = bookList.get(i);
+				bookList.remove(i);
+			}else {
+				aBook = null;
+			}
+		}
+		
+		return aBook;
+		
+	}
+	
+	public void returnBook() {
+		
+	}
+	
+	public static void main(String[] args) {
+
+	}
+
+}
+
+class Member {
+
+}
+

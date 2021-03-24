@@ -1,0 +1,19 @@
+package eTest1;
+
+import java.util.ArrayList;
+
+public class Library {
+	
+	private ArrayList<Book> bookList = new ArrayList<Book>();
+	
+
+	public static void main(String[] args) {
+
+	}
+
+}
+
+class Member {
+
+}
+
